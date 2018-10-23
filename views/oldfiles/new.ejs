@@ -1,0 +1,27 @@
+<% include partials/header.ejs %>
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center;">Creating a new POST.</h1>
+        <div style="width:30%; margin: 0 auto;">
+            <form action="/index" method="post">
+                <div class="form-group">
+                    <input required class="form-control" type="text" placeholder="Type the image caption here" name="name">
+                </div>
+                <div class="form-group">
+                    <input required class="form-control" type="text" placeholder="Type the image URL here" name="image">
+                </div>
+                <div class="form-group">
+                    <input required class="form-control" type="number" placeholder="Type the price here" step="0.01" name="price">
+                </div>
+                <div class="form-group">
+                    <input required class="form-control" type="text" placeholder="Type the image description here" name="desc">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit</button>
+                </div>
+            </form>
+        </div>
+        <br>
+        <strong><a href="/">Return.</a></strong></div>
+</div>
+<% include partials/footer.ejs %>

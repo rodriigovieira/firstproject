@@ -1,0 +1,20 @@
+<% include ../oldfiles/partials/header.ejs%>
+
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center;">Editing comment.</h1>
+        <div style="width:30%; margin: 0 auto;">
+            <form action="/index/<%= campgrounds._id %>/comments/<%= commentData._id%>/?_method=PUT" method="post">
+                <div class="form-group">
+                    <textarea placeholder="Post description" required class="form-control" type="text" value="<%= commentData.desc %>" name="newcomment"></textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit</button>
+                </div>
+            </form>
+        </div>
+        <br>
+        <strong><a href="/">Return.</a></strong></div>
+</div>
+
+<% include ../oldfiles/partials/footer.ejs %>
