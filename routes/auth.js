@@ -25,14 +25,6 @@ router.post("/register", function(req, res){
         });
     });
 });
-//
-// router.get("/login", function (req, res) {
-//     if(req.isAuthenticated()) {
-//         res.render("login", {message: req.flash("error")});
-//     }
-//         // req.flash("error", "You are already logged in.");
-//         // res.redirect("/index");
-// });
 
 router.get("/login", function (req, res) {
     if (req.isAuthenticated()) {
@@ -48,6 +40,7 @@ router.post("/login", passport.authenticate("local",
     {
         successRedirect: "/index",
         failureRedirect: "/login"
+
     }), function (req, res) {
 });
 
