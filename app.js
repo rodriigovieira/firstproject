@@ -73,4 +73,6 @@ app.use(function (err, req, res, next) {
     res.send(err.message);
 });
 
-module.exports = app;
+app.listen(process.env.PORT, process.env.IP);
+
+// module.exports = app;
