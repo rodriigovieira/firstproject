@@ -2,7 +2,6 @@ var express = require("express");
 var router = express.Router();
 var Datadb = require("../models/datadb");
 var Comment = require("../models/comment");
-var middleware = require("../middleware/middleware");
 
 router.get("/index", function (req, res) {
     Datadb.find({}, function (err, full_resp) {
