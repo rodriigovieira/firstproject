@@ -9,10 +9,7 @@ var methodOverride = require("method-override");
 var mongoose = require("mongoose");
 var passport = require("passport");
 var LocalStrategy = require("passport-local");
-var Datadb = require("./models/datadb");
-var Comment = require("./models/comment");
 var User = require("./models/user");
-var seedDB = require("./seeds");
 var flash = require("connect-flash");
 
 var authRoute = require("./routes/auth");
@@ -25,7 +22,6 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + "/public"));
 app.set('views', path.join(__dirname, 'views'));
 
-// seedDB();
 
 app.use(flash());
 
@@ -73,6 +69,8 @@ app.use(function (err, req, res, next) {
     res.send(err.message);
 });
 
-app.listen(process.env.PORT, process.env.IP);
+app.listen(process.env.PORT, process.env.IP, function () {
+    console.log("Feel the power of the Cloud.");
+});
 
 // module.exports = app;
