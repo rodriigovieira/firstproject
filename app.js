@@ -26,7 +26,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(flash());
 
 app.use(require("express-session")({
-    secret: "Steve Tyson is a motherfucker",
+    secret: "IJEJFJEIJF393488AJFIEJFIEJRFNijiJIIDIEJIDdeijienfi3u49438993r fejifejifief9fe9fef",
     resave: false,
     saveUninitialized: false
 }));
