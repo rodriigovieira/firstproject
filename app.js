@@ -69,8 +69,8 @@ app.use(function (err, req, res, next) {
     res.send(err.message);
 });
 
-app.listen(process.env.PORT, process.env.IP, function () {
-    console.log("Feel the power of the Cloud.");
+app.listen(process.env.PORT, process.env.IP, () => {
+    console.log('Server has started.');
 });
 
 // module.exports = app;
